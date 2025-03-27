@@ -1,1 +1,256 @@
-/* Add you CSS here */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap');
+
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif; /* Cute and readable font */
+  margin: 0;
+  padding: 0;
+  background-color: #fbeae5; /* Light beige background */
+  color: #333;
+}
+
+/* Header Styles */
+h1, h2 {
+  font-family: 'Playfair Display', serif; /* Cute and elegant serif font for headers */
+  color: #882944; /* Darker pink for headers */
+}
+
+/* Navigation Bar */
+nav {
+  background-color: #ffb6c1; /* Light pink */
+  padding: 10px 0;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  text-decoration-color: #ffc8d8; /* Lighter pink for underline */
+  color: #882944;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  text-decoration-thickness: 5px; /* Makes the underline thicker */
+  text-underline-offset: 6px; /* Adds more spacing between the underline and the text */
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #ffc8d8; /* Lighter pink for underline */
+  transition: 0.3s ease-in-out;
+}
+
+nav ul li a:visited {
+  color: #882944;
+}
+
+/* Hero Section */
+#hero {
+  text-align: center;
+  padding: 50px 20px;
+  background-image: url('img/floral-hero.jpg'); /* Set the background image */
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  position: relative; /* Position for overlay */
+  color: white; /* Change text color for better contrast */
+}
+
+#hero::before {
+  content: ''; /* Add an overlay */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black overlay */
+  z-index: 1; /* Place the overlay below the text */
+}
+
+#hero h1, #hero p {
+  position: relative; /* Ensure text is above the overlay */
+  z-index: 2;
+}
+
+#hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+#hero p {
+  font-size: 1.2em;
+}
+
+/* Bio Section */
+#bio {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Circular Image Style */
+.circular-image {
+  width: 150px; /* Set a fixed size for the image */
+  height: 150px;
+  border-radius: 50%; /* Make the image circular */
+  object-fit: cover; /* Ensure the image fits within the circle */
+  margin: 10px auto; /* Center the image and add spacing */
+  display: block; /* Center the image in its container */
+}
+
+/* Skills Section */
+#skills {
+  padding: 20px;
+  text-align: center;
+}
+
+#skills ul {
+  list-style: none;
+  padding: 0;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Default to column for smaller screens */
+  align-items: center; /* Center items */
+}
+
+#skills ul li {
+  margin: 5px 0;
+}
+
+/* Media query for medium and larger screens */
+@media (min-width: 768px) {
+  #skills ul {
+    flex-direction: row; /* Change to row layout for larger screens */
+    justify-content: center; /* Center items horizontally */
+  }
+
+  #skills ul li {
+    margin: 0 15px; /* Add horizontal spacing between items */
+  }
+}
+
+/* Projects Section */
+#projects {
+  padding: 20px;
+  text-align: center;
+}
+
+#projects ul {
+  list-style: none;
+  padding: 0;
+}
+
+#projects ul li {
+  margin: 5px 0;
+}
+
+.project-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  justify-content: center; /* Center the cards */
+  gap: 20px; /* Add spacing between cards */
+}
+
+.project-card {
+  background-color: #ffb6c1; /* Light pink background */
+  border: 2px solid #ffe4e1; /* Soft pink border */
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px;
+  width: 250px; /* Fixed width for cards */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add hover effect */
+}
+
+.project-card h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #882944; /* Darker pink for project title */
+}
+
+.project-card p {
+  font-size: 1em;
+  color: #333; /* Neutral color for project description */
+}
+
+.project-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Fun Music Section */
+#music {
+  padding: 20px;
+  text-align: center;
+}
+
+.music-cards {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  justify-content: center; /* Center the cards */
+  gap: 15px; /* Add spacing between cards */
+}
+
+.music-card {
+  background-color: transparent; /* Remove background color */
+  border: none; /* Remove border */
+  box-shadow: none; /* Remove shadow */
+  padding: 0; /* Remove padding */
+  width: auto; /* Allow flexible width */
+  text-align: center; /* Keep text centered */
+}
+
+.music-card h3 {
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  color: #882944; /* Darker pink for song title */
+}
+
+.music-card p {
+  font-size: 1em;
+  margin-bottom: 10px;
+  color: #333; /* Neutral color for artist name */
+}
+
+.music-card a {
+  text-decoration: none;
+  color: #882944; /* Darker pink for link */
+  font-weight: bold;
+  border: 1px solid #882944; /* Border for link */
+  padding: 5px 10px;
+  border-radius: 5px; /* Rounded button style */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.music-card a:hover {
+  background-color: #882944; /* Darker pink background on hover */
+  color: white; /* White text on hover */
+}
+
+/* Music Card Images */
+.music-card img {
+  width: 100px; /* Smaller size for music card images */
+  height: 100px;
+  margin-bottom: 10px; /* Add spacing below the image */
+}
+
+/* Contact Section */
+#contact {
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background-color: #ffb6c1; /* Light pink */
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 20px;
+}
