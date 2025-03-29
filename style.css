@@ -6,7 +6,7 @@ body {
   font-family: 'Poppins', sans-serif; /* Cute and readable font */
   margin: 0;
   padding: 0;
-  background-color: #fbeae5; /* Light beige background */
+  background-color: #ffd9ce; /* Light beige background */
   color: #333;
 }
 
@@ -23,8 +23,8 @@ h1, h2 {
 
 /* Navigation Bar */
 nav {
-  background-color: #ffb6c1; /* Light pink */
-  padding: 10px 0;
+  background-color: #882944; /* Light pink */
+  padding: 15px 0;
   text-align: center;
 }
 
@@ -41,30 +41,26 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  text-decoration-color: #ffc8d8; /* Lighter pink for underline */
-  color: #882944;
+  color: #ffd9ce;
   font-weight: bold;
+  font-size: 20px;
   transition: 0.3s ease-in-out;
-  text-decoration-thickness: 5px; /* Makes the underline thicker */
-  text-underline-offset: 6px; /* Adds more spacing between the underline and the text */
 }
 
 nav ul li a:hover {
-  text-decoration: underline;
-  text-decoration-color: #ffc8d8; /* Lighter pink for underline */
+  color: #fbb6b6;
   transition: 0.3s ease-in-out;
 }
 
 nav ul li a:visited {
-  color: #882944;
+  color: #ffd9ce;
 }
 
 /* Hero Section */
 #hero {
   text-align: center;
   padding: 50px 20px;
-  background-image: url('img/floral-hero.jpg'); /* Set the background image */
-  background-size: cover; /* Ensure the image covers the entire section */
+  background-image: url('img/floral-bg.jpg'); /* Set the background image */
   background-position: center; /* Center the image */
   position: relative; /* Position for overlay */
   color: white; /* Change text color for better contrast */
@@ -77,7 +73,7 @@ nav ul li a:visited {
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent black overlay */
+  background-color: rgba(244, 126, 126, 0.644); /* Semi-transparent black overlay */
   z-index: 1; /* Place the overlay below the text */
 }
 
@@ -88,11 +84,14 @@ nav ul li a:visited {
 
 #hero h1 {
   font-size: 2.5em;
+  margin-top: 10px;
   margin-bottom: 10px;
 }
 
 #hero p {
   font-size: 1.2em;
+  color: #882944;
+  font-weight: bolder;
 }
 
 /* Bio Section */
@@ -109,6 +108,7 @@ nav ul li a:visited {
   object-fit: cover; /* Ensure the image fits within the circle */
   margin: 10px auto; /* Center the image and add spacing */
   display: block; /* Center the image in its container */
+  border: solid 5px #fbb6b6; /* Add a border */
 }
 
 /* Skills Section */
@@ -135,11 +135,11 @@ nav ul li a:visited {
 }
 
 .skill-icon, .skill i {
-  width: 80px; /* Set the size of the skill icons */
-  height: 80px;
-  font-size: 80px; /* Adjust font size for Font Awesome icons */
+  width: 100px; /* Set the size of the skill icons */
+  height: 100px;
+  font-size: 100px; /* Adjust font size for Font Awesome icons */
   margin-bottom: 10px; /* Add spacing below the icon */
-  color: #ffb6c1; /* Lighter pink color for icons */
+  color: #fbb6b6; /* Lighter pink color for icons */
   transition: color 0.3s ease; /* Smooth transition for color change */
 }
 
@@ -182,7 +182,7 @@ nav ul li a:visited {
 }
 
 .project-card {
-  background-color: #ffb6c1; /* Light pink background */
+  background-color: #fbb6b6; /* Light pink background */
   border: 2px solid #ffe4e1; /* Soft pink border */
   border-radius: 10px; /* Rounded corners */
   padding: 20px;
@@ -262,11 +262,14 @@ nav ul li a:visited {
   transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
   border: solid 3px #882944;
   cursor: pointer; /* Indicate the image is clickable */
+  transition: 0.3s ease-in-out;
 }
 
 .music-card img:hover {
-  transform: scale(1.05); /* Slightly enlarge the image on hover */
+  transform: scale(1.04); /* Slightly enlarge the image on hover */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+  background-color: rgba(251, 182, 182, 0.644);
+  transition: 0.3s ease-in-out;
 }
 
 /* Progress Bar Styles */
@@ -274,7 +277,7 @@ nav ul li a:visited {
   margin: 25px auto; /* Center the progress bar horizontally */
   height: 10px; /* Thin progress bar */
   width: 80%; /* Set width relative to the music card */
-  background-color: #ffb6c1; /* Darker pink for the progress bar */
+  background-color: #fbb6b6; /* Darker pink for the progress bar */
   transition: width 0.1s linear; /* Smooth width transition */
   border-radius: 10px;
 }
@@ -287,7 +290,7 @@ nav ul li a:visited {
 
 /* Footer */
 footer {
-  background-color: #ffb6c1; /* Light pink */
+  background-color: #fbb6b6; /* Light pink */
   text-align: center;
   padding: 10px 0;
   margin-top: 20px;
