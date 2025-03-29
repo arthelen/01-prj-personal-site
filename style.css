@@ -53,7 +53,7 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-  color: #fbb6b6;
+  color: #fbb6b6; /* Lighter pink on hover */
   text-shadow: 2px 2px 5px #ffd9ce; /* Add beige drop shadow on hover */
   transition: 0.2s ease-in-out;
 }
