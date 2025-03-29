@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>My Personal Site</title>
+  <title>allison's space</title>
+  <script src="https://kit.fontawesome.com/aec2b1abc4.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -27,7 +28,7 @@
   <!-- Bio Section -->
   <section id="bio">
     <h2>about me</h2>
-    <img src="img/about-me.jpg" alt="About Me" class="circular-image"> <!-- Circular image for About Me -->
+    <img src="img/me.JPEG" alt="About Me" class="circular-image"> <!-- Circular image for About Me -->
     <p>Hello! I'm Allison, a web developer who absolutely loves creating beautiful and user-friendly designs. I'm deeply passionate about UI and enjoy bringing ideas to life with creativity and code. Let's make the web a more delightful place together!</p>
   </section>
 
@@ -35,16 +36,33 @@
   <section id="skills">
     <h2>my skills</h2>
     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
+      <!-- Skill 1 -->
+      <li>
+        <div class="skill">
+          <i class="fa-brands fa-html5"></i>
+          <p>HTML</p>
+        </div>
+      </li>
+      <!-- Skill 2 -->
+      <li>
+        <div class="skill">
+          <i class="fa-brands fa-css3-alt"></i>
+          <p>CSS</p>
+        </div>
+      </li>
+      <!-- Skill 3 -->
+      <li>
+        <div class="skill">
+          <i class="fa-brands fa-js"></i>
+          <p>JavaScript</p>
+        </div>
+      </li>
     </ul>
   </section>
 
   <!-- Projects Section -->
   <section id="projects">
     <h2>my projects</h2>
-    <p>Here are some of the projects I've worked on:</p>
     <div class="project-cards">
       <!-- Card for Project 1 -->
       <div class="project-card">
@@ -68,54 +86,60 @@
   <section id="music">
     <h2>fun music</h2>
     <p>here are some of my favorite songs to code to:</p>
+    <p>(click on the artist image to hear a snippet, but be aware of volume)</p>
     <div class="music-cards">
       <!-- Card for Song 1 -->
       <div class="music-card">
-        <img src="img/song1.jpg" alt="Song 1" class="circular-image"> <!-- Circular image for Song 1 -->
-        <h3>Song 1</h3>
+        <img src="img/stray-kids-card.jpg" alt="Song 1" class="circular-image" onclick="playAudio('audio/bounce-back.mp3', 'progress-bounce-back')">
+        <div class="progress-bar" id="progress-bounce-back"></div>
+        <h3>bounce back</h3>
         <p>stray kids</p>
-        <a href="https://open.spotify.com/track/example1" target="_blank">Listen on Spotify</a>
       </div>
       <!-- Card for Song 2 -->
       <div class="music-card">
-        <img src="img/song2.jpg" alt="Song 2" class="circular-image"> <!-- Circular image for Song 2 -->
-        <h3>heavy</h3>
-        <p>the marías</p>
-        <a href="https://open.spotify.com/track/example2" target="_blank">Listen on Spotify</a>
+        <img src="img/hans-zimmer-card.jpg" alt="Song 5" class="circular-image" onclick="playAudio('audio/supermarine.mp3', 'progress-hans-zimmer')">
+        <div class="progress-bar" id="progress-hans-zimmer"></div>
+        <h3>supermarine</h3>
+        <p>hans zimmer</p>
       </div>
       <!-- Card for Song 3 -->
       <div class="music-card">
-        <img src="img/song3.jpg" alt="Song 3" class="circular-image"> <!-- Circular image for Song 3 -->
-        <h3>Song 3</h3>
-        <p>aggression</p>
-        <a href="https://open.spotify.com/track/example3" target="_blank">Listen on Spotify</a>
+        <img src="img/sleep-token-card.jpg" alt="Song 3" class="circular-image" onclick="playAudio('audio/alkaline.mp3', 'progress-sleep-token')">
+        <div class="progress-bar" id="progress-sleep-token"></div>
+        <h3>alkaline</h3>
+        <p>sleep token</p>
       </div>
       <!-- Card for Song 4 -->
       <div class="music-card">
-        <img src="img/song3.jpg" alt="Song 3" class="circular-image"> <!-- Circular image for Song 4 -->
-        <h3>Song 3</h3>
+        <img src="img/tate-mcrae-card.jpg" alt="Song 4" class="circular-image" onclick="playAudio('audio/run-for-the-hills.mp3', 'progress-tate-mcrae')">
+        <div class="progress-bar" id="progress-tate-mcrae"></div>
+        <h3>run for the hills</h3>
         <p>tate mcrae</p>
-        <a href="https://open.spotify.com/track/example3" target="_blank">Listen on Spotify</a>
       </div>
       <!-- Card for Song 5 -->
       <div class="music-card">
-        <img src="img/song3.jpg" alt="Song 3" class="circular-image"> <!-- Circular image for Song 5 -->
-        <h3>supermarine</h3>
-        <p>hans zimmer</p>
-        <a href="https://open.spotify.com/track/example3" target="_blank">Listen on Spotify</a>
+        <img src="img/the-marias-card.jpg" alt="Song 2" class="circular-image" onclick="playAudio('audio/the-marias-heavy.mp3', 'progress-the-marias')">
+        <h3>heavy</h3>
+        <p>the marías</p>
+        <div class="progress-bar" id="progress-the-marias"></div>
       </div>
     </div>
+    <!-- Hidden audio player -->
+    <audio id="audio-player" controls style="display: none;"></audio>
   </section>
 
   <!-- Contact Section -->
   <section id="contact">
     <h2>contact me</h2>
-    <p>Email: yourname@example.com</p>
+    <p>email:</p>
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2023 My Personal Site</p>
+    <p>&copy; 2025 site</p>
   </footer>
+
+  <!-- Link to JavaScript file -->
+  <script src="script.js"></script>
 </body>
 </html>

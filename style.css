@@ -10,6 +10,11 @@ body {
   color: #333;
 }
 
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling for the entire page */
+}
+
 /* Header Styles */
 h1, h2 {
   font-family: 'Playfair Display', serif; /* Cute and elegant serif font for headers */
@@ -98,8 +103,8 @@ nav ul li a:visited {
 
 /* Circular Image Style */
 .circular-image {
-  width: 150px; /* Set a fixed size for the image */
-  height: 150px;
+  width: 350px; /* Set a fixed size for the image */
+  height: 350px;
   border-radius: 50%; /* Make the image circular */
   object-fit: cover; /* Ensure the image fits within the circle */
   margin: 10px auto; /* Center the image and add spacing */
@@ -122,6 +127,24 @@ nav ul li a:visited {
 
 #skills ul li {
   margin: 5px 0;
+}
+
+/* Skill Section Styles */
+.skill {
+  text-align: center; /* Center the content inside each skill */
+}
+
+.skill-icon, .skill i {
+  width: 80px; /* Set the size of the skill icons */
+  height: 80px;
+  font-size: 80px; /* Adjust font size for Font Awesome icons */
+  margin-bottom: 10px; /* Add spacing below the icon */
+  color: #ffb6c1; /* Lighter pink color for icons */
+  transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.skill-icon:hover, .skill i:hover {
+  color: #882944; /* Change to darker pink on hover */
 }
 
 /* Media query for medium and larger screens */
@@ -196,49 +219,64 @@ nav ul li a:visited {
   flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
   justify-content: center; /* Center the cards */
   gap: 15px; /* Add spacing between cards */
+  z-index: 5;;
 }
 
 .music-card {
   background-color: transparent; /* Remove background color */
   border: none; /* Remove border */
   box-shadow: none; /* Remove shadow */
-  padding: 0; /* Remove padding */
+  padding: 25px; /* Remove padding */
   width: auto; /* Allow flexible width */
   text-align: center; /* Keep text centered */
+  position: relative; /* Ensure the progress bar is positioned correctly */
 }
 
 .music-card h3 {
   font-size: 1.2em;
-  margin-bottom: 5px;
   color: #882944; /* Darker pink for song title */
+  margin: 0;
 }
 
 .music-card p {
   font-size: 1em;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 25px;
   color: #333; /* Neutral color for artist name */
 }
 
 .music-card a {
   text-decoration: none;
-  color: #882944; /* Darker pink for link */
   font-weight: bold;
-  border: 1px solid #882944; /* Border for link */
   padding: 5px 10px;
   border-radius: 5px; /* Rounded button style */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.music-card a:hover {
-  background-color: #882944; /* Darker pink background on hover */
-  color: white; /* White text on hover */
-}
-
 /* Music Card Images */
 .music-card img {
-  width: 100px; /* Smaller size for music card images */
-  height: 100px;
+  width: 200px; /* Smaller size for music card images */
+  height: 200px;
   margin-bottom: 10px; /* Add spacing below the image */
+  padding: 10px; /* Add padding around the image */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+  border: solid 3px #882944;
+  cursor: pointer; /* Indicate the image is clickable */
+}
+
+.music-card img:hover {
+  transform: scale(1.05); /* Slightly enlarge the image on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+/* Progress Bar Styles */
+.progress-bar {
+  margin: 25px auto; /* Center the progress bar horizontally */
+  height: 10px; /* Thin progress bar */
+  width: 80%; /* Set width relative to the music card */
+  background-color: #ffb6c1; /* Darker pink for the progress bar */
+  transition: width 0.1s linear; /* Smooth width transition */
+  border-radius: 10px;
 }
 
 /* Contact Section */
